@@ -1,3 +1,5 @@
+package com.kostylevv.javase.hfj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,7 +14,7 @@ public class DailyAdviceClient {
 
         try {
 
-            Socket socket = new Socket("http://127.0.0.1", 4242);
+            Socket socket = new Socket("127.0.0.1", 4242);
 
             InputStreamReader inputStreamReader = new InputStreamReader(socket.getInputStream());
 
@@ -33,6 +35,7 @@ public class DailyAdviceClient {
 
 
     public static void main(String[] args) {
-
+        DailyAdviceClient client = new DailyAdviceClient();
+        client.go();
     }
 }
